@@ -36,13 +36,30 @@ class LinkedStack:
 
         while fast and fast.next:
             fast = fast.next.next
+            if fast != None:
+                print("fast: ", fast.val)
+
             rev, rev.next, slow = slow, rev, slow.next
+            print("slow1: ", slow.val)
+            print("rev1: ", rev.val)
+            if rev.next != None:
+                print("rev1.next: ", rev.next.val)
         if fast:
             slow = slow.next
-
+            print("if: ", slow.val)
+        print("======================================")
+        print(slow.next.val)
+        print("======================================")
         while rev and rev.val == slow.val:
             slow, rev = slow.next, rev.next
-
+            if slow != None:
+                print("slow2: ", slow.val)
+            else:
+                print("sf")
+            if rev !=  None:
+                print("rev2: ", rev.val)
+            else:
+                print("rf")
         return not rev
     
     def display(self):
@@ -56,6 +73,8 @@ s = LinkedStack()
 
 s.push(1)
 s.push(2)
+s.push(3)
+s.push(3)
 s.push(2)
 s.push(1)
 
