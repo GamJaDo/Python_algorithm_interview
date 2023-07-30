@@ -29,5 +29,5 @@ def removeDuplicateLetters(s):
 
     return ''.join(stack)
 
-s = "cbacdbc"
+s = "ecbac"
 print(removeDuplicateLetters(s))
